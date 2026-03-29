@@ -231,3 +231,21 @@ nav a.active, .submenu a.active {
     font-weight: bold;
     margin-bottom: 15px;
 }
+.edit-list {
+    margin-bottom: 20px;
+}
+
+.edit-list a {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 4px;
+}
+
+.edit-list a.currentRow {
+    color: red;
+    border: 2px solid red;
+}
