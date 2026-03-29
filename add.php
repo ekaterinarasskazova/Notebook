@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_submit'])) {
         $stmt->bindValue(':comment', $row['comment']);
 
         if ($stmt->execute()) {
-            $message = '<p class="success">Запись добавлена</p>';
+            $message = '<div class="alert alert-success">Запись добавлена</div>';
 
             $row = [
                 'surname' => '',
@@ -59,10 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_submit'])) {
                 'comment' => ''
             ];
         } else {
-            $message = '<p class="error">Ошибка: запись не добавлена</p>';
+            $message = '<div class="alert alert-danger">Ошибка: запись не добавлена</div>';
         }
     } catch (PDOException $e) {
-        $message = '<p class="error">Ошибка: запись не добавлена</p>';
+        $message = '<div class="alert alert-danger">Ошибка: запись не добавлена</div>';
     }
 }
 

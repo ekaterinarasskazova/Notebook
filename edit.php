@@ -66,12 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit_submit'])) {
         $stmt->bindValue(':id', $currentId, PDO::PARAM_INT);
 
         if ($stmt->execute()) {
-            $message = '<p class="success">Запись обновлена</p>';
+            $message = '<div class="alert alert-success">Запись обновлена</div>';
         } else {
-            $message = '<p class="error">Ошибка: запись не обновлена</p>';
+            $message = '<div class="alert alert-danger">Ошибка: запись не обновлена</div>';
         }
     } catch (PDOException $e) {
-        $message = '<p class="error">Ошибка: запись не обновлена</p>';
+        $message = '<div class="alert alert-danger">Ошибка: запись не обновлена</div>';
     }
 }
 

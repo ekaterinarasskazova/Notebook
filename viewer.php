@@ -50,7 +50,9 @@ function showContacts($pdo, $sort = 'default', $pageno = 1)
     $html = '';
 
     if (count($rows) > 0) {
-        $html .= '<table>';
+        $html .= '<div class="table-responsive">';
+        $html .= '<table class="table table-striped table-bordered table-hover">';
+        
         $html .= '<tr>';
         $html .= '<th>Фамилия</th>';
         $html .= '<th>Имя</th>';
@@ -77,21 +79,23 @@ function showContacts($pdo, $sort = 'default', $pageno = 1)
             $html .= '</tr>';
         }
 
-        $html .= '</table>';
+       $html .= '</table>';
+       $html .= '</div>';
+
     } else {
         $html .= '<p>Записей пока нет.</p>';
     }
 
-    if ($totalPages > 1) {
-        $html .= '<div class="pagination">';
+   if ($totalPages > 1) {
+    $html .= '<div class="mt-3 text-center">';
 
-        for ($i = 1; $i <= $totalPages; $i++) {
-            $class = ($i == $pageno) ? 'activePage' : '';
-            $html .= '<a class="' . $class . '" href="index.php?page=view&sort=' . $sort . '&pageno=' . $i . '">' . $i . '</a>';
-        }
-
-        $html .= '</div>';
+    for ($i = 1; $i <= $totalPages; $i++) {
+        $class = ($i == $pageno) ? 'btn btn-danger me-1' : 'btn btn-outline-primary me-1';
+        $html .= '<a class="' . $class . '" href="index.php?page=view&sort=' . $sort . '&pageno=' . $i . '">' . $i . '</a>';
     }
+
+    $html .= '</div>';
+}
 
     return $html;
 }

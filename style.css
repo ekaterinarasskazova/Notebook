@@ -28,11 +28,13 @@ main
 
 header {
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     background-color: rgba(92, 103, 168, 0.856);
-    display: inline-flex;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 a{

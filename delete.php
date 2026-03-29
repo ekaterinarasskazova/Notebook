@@ -15,15 +15,15 @@ if (isset($_GET['id'])) {
             $deleteStmt->bindValue(':id', $id, PDO::PARAM_INT);
 
             if ($deleteStmt->execute()) {
-                $message = '<p class="success">Запись с фамилией ' . htmlspecialchars($row['surname']) . ' удалена</p>';
+                $message = '<div class="alert alert-success">Запись с фамилией ' . htmlspecialchars($row['surname']) . ' удалена</div>';
             } else {
-                $message = '<p class="error">Ошибка: запись не удалена</p>';
+                $message = '<div class="alert alert-danger">Ошибка: запись не удалена</div>';
             }
         } else {
-            $message = '<p class="error">Запись не найдена</p>';
+            $message = '<div class="alert alert-danger">Запись не найдена</div>';
         }
     } catch (PDOException $e) {
-        $message = '<p class="error">Ошибка: запись не удалена</p>';
+        $message = '<div class="alert alert-danger">Ошибка: запись не удалена</div>';
     }
 }
 

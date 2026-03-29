@@ -11,7 +11,7 @@ function renderMenu($page = 'view', $sort = 'default')
         $sort = 'default';
     }
 
-    $html = '<nav>';
+    $html = '<div class="text-center mb-4">';
 
     $menuItems = [
         'view' => 'Просмотр',
@@ -21,14 +21,14 @@ function renderMenu($page = 'view', $sort = 'default')
     ];
 
     foreach ($menuItems as $key => $title) {
-        $class = ($page === $key) ? 'active' : '';
+        $class = ($page === $key) ? 'btn btn-danger me-2 mb-2' : 'btn btn-primary me-2 mb-2';
         $html .= '<a class="' . $class . '" href="index.php?page=' . $key . '">' . $title . '</a>';
     }
 
-    $html .= '</nav>';
+    $html .= '</div>';
 
     if ($page === 'view') {
-        $html .= '<div class="submenu">';
+        $html .= '<div class="text-center mb-4">';
 
         $subMenuItems = [
             'default' => 'По добавлению',
@@ -37,7 +37,7 @@ function renderMenu($page = 'view', $sort = 'default')
         ];
 
         foreach ($subMenuItems as $key => $title) {
-            $class = ($sort === $key) ? 'active' : '';
+            $class = ($sort === $key) ? 'btn btn-danger btn-sm me-2 mb-2' : 'btn btn-outline-primary btn-sm me-2 mb-2';
             $html .= '<a class="' . $class . '" href="index.php?page=view&sort=' . $key . '">' . $title . '</a>';
         }
 

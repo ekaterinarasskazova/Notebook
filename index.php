@@ -16,6 +16,7 @@ require_once 'menu.php';
 <head>
     <meta charset="UTF-8">
     <title>Записная книжка</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +25,7 @@ require_once 'menu.php';
     <?php echo renderMenu($page, $sort); ?>
 </header>
 
-<main>
+<main class="container mt-4 mb-5">
     <?php
     switch ($page) {
         case 'add':
