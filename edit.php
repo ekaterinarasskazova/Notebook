@@ -90,6 +90,5 @@ foreach ($contacts as $contact) {
 echo '</div>';
 
 echo $message;
-echo '<input type="hidden" form="contactForm" name="id" value="' . $currentId . '">';
 require 'form.php';
 ?>

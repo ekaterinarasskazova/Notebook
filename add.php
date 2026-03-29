@@ -14,6 +14,7 @@ $row = [
 ];
 
 $button = 'Добавить запись';
+$submitName = 'add_submit';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_submit'])) {
     $row['surname'] = trim($_POST['surname']);
