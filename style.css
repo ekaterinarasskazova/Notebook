@@ -198,3 +198,25 @@ nav a.active, .submenu a.active {
     color: red;
     border-color: red;
 }
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    text-decoration: none;
+    color: blue;
+    border: 1px solid blue;
+    padding: 6px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    border: 2px solid blue;
+}
+
+.pagination a.activePage {
+    color: red;
+    border-color: red;
+}
