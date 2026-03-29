@@ -249,3 +249,21 @@ nav a.active, .submenu a.active {
     color: red;
     border: 2px solid red;
 }
+.delete-list {
+    margin-top: 20px;
+}
+
+.delete-list a {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 4px;
+}
+
+.delete-list a:hover {
+    border: 2px solid red;
+    color: red;
+}
